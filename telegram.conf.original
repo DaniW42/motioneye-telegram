@@ -1,0 +1,11 @@
+## Configuration for tg-send* commands
+## ! This file MUST be in the same directory as tg-send*.sh files !
+## LastConfigSave=
+
+var_botApiKey=''
+var_chatId=''
+
+
+## to be done...
+var_sendSilent=true
+var_logPath=$var_binDir/tg-motionsend.log
