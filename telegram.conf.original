@@ -4,6 +4,7 @@
 
 var_botApiKey=''
 var_chatId=''
+var_pingAddress=''
 
 
 ## to be done...
