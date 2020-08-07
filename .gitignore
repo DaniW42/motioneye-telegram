@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+## IMPORTANT to not accidentally upload the conf file which includes sensitive data
+telegram.conf
