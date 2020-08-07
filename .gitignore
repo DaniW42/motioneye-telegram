@@ -130,3 +130,4 @@ dmypy.json
 
 ## IMPORTANT to not accidentally upload the conf file which includes sensitive data
 telegram.conf
+motion-send.log
