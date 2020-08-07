@@ -1,8 +1,12 @@
 #!/bin/bash
+
+## Read Configuration-File so we have the variables available
+. telegram.conf
+
 printf "=========================================================\n" >> /home/pi/motion-send.log
 printf "$(date) - MOTION DETECTED.\n" >> /home/pi/motion-send.log
 
-if ping -c 3 -W 1000 192.168.0.210 > /dev/null
+if ping -c 3 -W 1000 $var_pingAddress > /dev/null
 
 then
 	printf "$(date) - OP6T available, end script.\n" >> /home/pi/motion-send.log
