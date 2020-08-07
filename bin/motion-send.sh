@@ -6,7 +6,11 @@
 printf "=========================================================\n" >> /home/pi/motion-send.log
 printf "$(date) - MOTION DETECTED.\n" >> /home/pi/motion-send.log
 
+<<<<<<< HEAD
 if ping -c 3 -W 1000 $var_pingAddress > /dev/null
+=======
+if ping -c 3 -W 2 192.168.0.210 > /dev/null
+>>>>>>> 13e00c5c2ad74aa1988fc28932571f732fec445b
 
 then
 	printf "$(date) - OP6T available, end script.\n" >> /home/pi/motion-send.log
