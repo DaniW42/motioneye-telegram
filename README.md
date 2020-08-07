@@ -1,4 +1,4 @@
-# motioneye-telegram
+# motioneye-telegram - WORK IN PROGRESS! DO NOT RUN ANY SCRIPTS WITHOUT CHECKING TWICE (or more...)
 
 @botfather
 
