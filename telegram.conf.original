@@ -1,12 +1,18 @@
 ## Configuration for tg-send* commands
 ## ! This file MUST be in the same directory as tg-send*.sh files !
-## LastConfigSave=
+## LastConfigSave='Fr 7. Aug 21:50:02 CEST 2020'
 
+## Telegram specific
 var_botApiKey=''
 var_chatId=''
+
+## Device settings
 var_pingAddress=''
 
+## General settings ( directories without trailling / )
+var_mediaDir=''
+var_gitDir=''
 
 ## to be done...
-var_sendSilent=true
-var_logPath=$var_binDir/tg-motionsend.log
+# var_sendSilent=true
+
