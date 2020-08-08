@@ -34,8 +34,8 @@ then
 else
 	func_writeLog "$(date) - Device NOT available, RUN script."
 
-	lastsnap=$(tree -ftri "$var_mediaDir" | grep .jpg | head -n1)
-	lastvideo=$(tree -ftri "$var_mediaDir" | grep -v thumb | grep .mp4 | head -n1)
+	lastsnap=$(tree -ftri "$var_mediaDir/$var_cameraName" | grep .jpg | head -n1)
+	lastvideo=$(tree -ftri "$var_mediaDir/$var_cameraName" | grep -v thumb | grep .mp4 | head -n1)
 	func_writeLog "$(date) - \$lastsnap is $lastsnap"
 	func_writeLog "$(date) - \$lastvideo is $lastvideo"
 
