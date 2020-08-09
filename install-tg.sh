@@ -8,7 +8,7 @@ if [ ! -f "telegram.conf" ]
 then
 	echo "I was unable to find telegram.conf file!"
 	echo "This is why I decided to get you a new one from github ;-)"
-	wget -q https://raw.githubusercontent.com/DaniW42/motioneye-telegram/master/telegram.conf.original?token=AFA6X6Q435L26KBKXPFJHA27FVXFK -O telegram.conf
+	wget -q https://raw.githubusercontent.com/DaniW42/motioneye-telegram/master/telegram.conf.original -O telegram.conf
 else
 	printf "Found telegram.conf\n"
 fi
