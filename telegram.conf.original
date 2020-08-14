@@ -1,14 +1,15 @@
 ## Configuration for tg-send* commands
 ## ! This file MUST be in the same directory as tg-send*.sh files !
 ## LastConfigSave=''
-var_ConfVersion=0.1
+var_ConfVersion=0.2
 
 ## Telegram specific
 var_botApiKey=''
 var_chatId=''
 
-## Device settings
-var_pingAddress=''
+## Device settings. IP-Adresses MUST be divided by single spaces
+## like this: var_pingDevices=(192.168.0.5 192.168.0.15)
+var_pingDevices=()
 
 ## General settings ( directories without trailling / )
 var_mediaDir=''
