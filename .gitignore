@@ -1,4 +1,4 @@
-# Byte-compiled / optimized / DLL files
+[4~# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -130,4 +130,7 @@ dmypy.json
 
 ## IMPORTANT to not accidentally upload the conf file which includes sensitive data
 telegram.conf
+
+## Additional files to exclude from repository
 motion-send.log
+*.bak
