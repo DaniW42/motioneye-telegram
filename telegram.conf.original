@@ -1,7 +1,6 @@
 ## Configuration for tg-send* commands
-## ! This file MUST be in the same directory as tg-send*.sh files !
 ## LastConfigSave=''
-var_ConfVersion=0.2
+var_ConfVersion=0.3
 
 ## Telegram specific
 var_botApiKey=''
