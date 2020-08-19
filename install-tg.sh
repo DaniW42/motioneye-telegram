@@ -56,7 +56,7 @@ function func_setConfVar () {
 		echo ""; read -p "$1" userinput
 		if func_isVarEmpty $userinput
 		then
-			func_isVarEmpty $3 && (echo "Error"; continue) || break
+			func_isVarEmpty $3 && echo "Error" || break
 		else
 			$2="$userinput"
 			break
@@ -73,7 +73,6 @@ function func_setConfArray () {
 			if func_isArrayEmpty "${var_pingDevices[@]}"
 			then
 				echo "Error!"
-				continue
 			else
 				break
 			fi
