@@ -9,6 +9,12 @@ source $DIR/../telegram.conf
 ## Get the name of the camera which detected a motion (done by parameter %$ in motioneye webinterface command)
 var_cameraName=$1
 
+## Get the id of the camera which detected a motion (done by parameter %t in motioneye webinterface command)
+var_cameraId=$2
+
+var_mediaDir="$(dirname $(grep target_dir /etc/motioneye/camera-$var_cameraId.conf | cut -d ' ' -f 2))"
+var_mediaCameraDir="$var_mediaDir/$var_cameraName"
+
 ## Functions
 func_writeLog () {
    printf "$1\n" >> $var_gitDir/motion-send.log
@@ -49,8 +55,8 @@ then
 else
 	func_writeLog "$(date) - Device NOT available, RUN script."
 
-	lastsnap=$(tree -ftri "$var_mediaDir/$var_cameraName" | grep .jpg | head -n1)
-	lastvideo=$(tree -ftri "$var_mediaDir/$var_cameraName" | grep -v thumb | grep .mp4 | head -n1)
+	lastsnap=$(tree -ftri "$var_mediaCameraDir" | grep .jpg | head -n1)
+	lastvideo=$(tree -ftri "$var_mediaCameraDir" | grep -v thumb | grep .mp4 | head -n1)
 	func_writeLog "$(date) - \$lastsnap is $lastsnap"
 	func_writeLog "$(date) - \$lastvideo is $lastvideo"
 
