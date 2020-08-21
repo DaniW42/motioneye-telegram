@@ -10,10 +10,6 @@ var_chatId=''
 ## like this: var_pingDevices=(192.168.0.5 192.168.0.15)
 var_pingDevices=()
 
-## General settings ( directories without trailling / )
-var_mediaDir=''
-var_gitDir=''
-
 ## to be done...
 # var_sendSilent=true
 

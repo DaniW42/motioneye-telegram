@@ -1,31 +1,34 @@
 #!/bin/bash
 
-## get my current directory
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-
-## Read Configuration-File so we have the variables available
-source $DIR/../telegram.conf
-
 ## Get the name of the camera which detected a motion (done by parameter %$ in motioneye webinterface command)
 var_cameraName=$1
 
 ## Get the id of the camera which detected a motion (done by parameter %t in motioneye webinterface command)
 var_cameraId=$2
 
+## get my current directory
+var_binDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+## Get the name of the motioneye-telegram project directory
+var_projectDir="$var_binDir"/..
+
 var_mediaDir="$(dirname $(grep target_dir /etc/motioneye/camera-$var_cameraId.conf | cut -d ' ' -f 2))"
 var_mediaCameraDir="$var_mediaDir/$var_cameraName"
 
+## Read Configuration-File so we have the variables available
+source $var_projectDir/telegram.conf
+
 ## Functions
 func_writeLog () {
-   printf "$1\n" >> $var_gitDir/motion-send.log
+   printf "$1\n" >> $var_projectDir/motion-send.log
 }
 
 func_sendPhoto () {
-   $var_gitDir/bin/tg-sendPhoto.py $var_botApiKey $var_chatId $1 $2
+   $var_binDir/tg-sendPhoto.py $var_botApiKey $var_chatId $1 $2
 }
 
 func_sendVideo () {
-   $var_gitDir/bin/tg-sendVideo.py $var_botApiKey $var_chatId $1 $2
+   $var_binDir/tg-sendVideo.py $var_botApiKey $var_chatId $1 $2
 }
 
 func_pingDevices () {
@@ -61,9 +64,9 @@ else
 	func_writeLog "$(date) - \$lastvideo is $lastvideo"
 
 	func_writeLog "$(date) - BEGIN tg-sendPhoto.py:"
-	$var_gitDir/bin/tg-sendPhoto.py $var_botApiKey $var_chatId $lastsnap "$var_cameraName - ${lastsnap: -23:19}"
+	$var_binDir/tg-sendPhoto.py $var_botApiKey $var_chatId $lastsnap "$var_cameraName - ${lastsnap: -23:19}"
 	func_writeLog "$(date) - BEGIN tg-sendVideo.py:"
-	$var_gitDir/bin/tg-sendVideo.py $var_botApiKey $var_chatId $lastvideo "$var_cameraName - ${lastsnap: -23:19}"
+	$var_binDir/tg-sendVideo.py $var_botApiKey $var_chatId $lastvideo "$var_cameraName - ${lastsnap: -23:19}"
 
 	func_writeLog "========================================================="
 	func_writeLog ""
