@@ -51,7 +51,7 @@ motioneye-telegram checks wether your device is available in your WLAN or not an
     ./install-tg.sh
     ```
 
-### Herstellen der Verbindung mit motioneye
+### connecting with motioneye
 
 *   look for your script path and enter it in motioneye ("run an end command" in "motion notification")
 	e.g. ```bash /home/pi/motioneye-telegram/bint/motion-send.sh %$ %t```
