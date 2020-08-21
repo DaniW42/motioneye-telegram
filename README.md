@@ -1,27 +1,60 @@
-# motioneye-telegram - WORK IN PROGRESS! DO NOT RUN ANY SCRIPTS WITHOUT CHECKING TWICE (or more...)
+# motioneye-telegram
 
-@botfather
+### WORK IN PROGRESS! - Check every script twice
 
-### Neuen Bot erstellen
+The project is based on motioneye by [ccrisan - github](https://github.com/ccrisan/motioneye/wiki/Installation)
+motioneye-telegram checks wether your device is available in your WLAN or not and sends a message to your telegram-bot if motion was detected.
+	
+### Bot-Creation
 
+##### create a new telegram-bot
+*   look for @botfather in telegram and open the chat
+*	enter the following command and follow the the @botfather for creation
+    ```sh
     /newbot
+    ```
+*   write your HTTP APY KEY down 
 
-"token to access the HTTP API" wird angezeigt --> sichern!
-
-#### Privacy aktivieren (https://core.telegram.org/bots#privacy-mode)
+##### privacy activation 
+*   details can be found [here](https://core.telegram.org/bots#privacy-mode) nachsehen
+*   enter the following command into telegram to use some more privacy  
+    ```
     /setprivacy
+    ```
+	
+##### more telegram commands:
+*   you can enter these into telegram if you want
+    ```
+    /setdescription - changes the bot-description
+	/setabouttext - changes the bot-about-description
+	/setuserpic - changes the photo in your bot-profile
+    ```
 
-### Optionale Befehle:
-    /setdescription - change bot description
-    /setabouttext - change bot about info
-    /setuserpic - change bot profile photo
+##### note your chat-id:
+*   write to your telegram-bot - maybe twice (@<YOUR_BOT_USERNAME>)
+*   open the link with your API KEY in it
+    ```
+    https://api.telegram.org/bot<ENTER_YOUR_COMPLETE_API_KEY>/getUpdates
+    ```
+*   browser output:
+	```
+	"message":{"message_id":1194,"from":{"id":<YOUR_CHAT_ID>,"is_bot":false,"first_name":"<YOUT_NAME>","username":"<YOUR_USER_NAME>","language_code":"de"}
+	```
+*   look for your chat-id and write it down
 
-### Chat_id herausfinden:
-Eigenen Bot in Telegram anschreiben (@username)
 
-[https://api.telegram.org/bot<hier api token komplett einfügen>/getUpdates](https://api.telegram.org/bot%3Chier%20api%20token%20komplett%20einf%C3%BCgen%3E/getUpdates) aufrufen
+### installation of motioneye-telegram
+*   go to your home directory on your raspberry pi
+*   download all the files from github 
+*   start the installion script
+    ```
+    ./install-tg.sh
+    ```
 
-#### Ausgabe im Browser:
-"message":{"message_id":1194,"from":{"id":## HIER STEHT DIE CHAT_ID ##,"is_bot":false,"first_name":"## hier steht der name ##","username":"## hier steht der username ##","language_code":"de"}
+### Herstellen der Verbindung mit motioneye
 
-### Jetzt auf dem pi install-tg.sh ausführen
+*   look for your script path and enter it in motioneye ("run an end command" in "motion notification")
+	e.g. ```bash /home/pi/motioneye-telegram/bint/motion-send.sh %$ %t```
+*   ```%$``` important because it passes the camera name to the script
+*   ```%t``` important because it passes the camera id to the script
+	
