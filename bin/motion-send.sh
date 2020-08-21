@@ -6,6 +6,9 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 ## Read Configuration-File so we have the variables available
 source $DIR/../telegram.conf
 
+## Get the name of the motioneye-telegram root directory
+var_gitDir=$DIR/../
+
 ## Get the name of the camera which detected a motion (done by parameter %$ in motioneye webinterface command)
 var_cameraName=$1
 
