@@ -9,7 +9,7 @@ motioneye-telegram checks whether your device is available in your wifi or not a
 
 ##### create a new telegram-bot
 *   look for [@botfather](https://t.me/botfather) in telegram and open a chat
-*	enter the following command and follow the the wizard for creation
+*	enter the following command and follow the wizard for creation
     ```
     /newbot
     ```
