@@ -1,6 +1,6 @@
 ## Configuration for tg-send* commands
 ## LastConfigSave=''
-var_ConfVersion=0.3
+var_ConfVersion=0.4
 
 ## Telegram specific
 var_botApiKey=''
@@ -9,6 +9,8 @@ var_chatId=''
 ## Device settings. IP-Adresses MUST be divided by single spaces
 ## like this: var_pingDevices=(192.168.0.5 192.168.0.15)
 var_pingDevices=()
+var_pingFail='0'
+var_deviceAvailable='true'
 
 ## to be done...
 # var_sendSilent=true
