@@ -11,7 +11,3 @@ var_chatId=''
 var_pingDevices=()
 var_pingFail='0'
 var_deviceAvailable='true'
-
-## to be done...
-# var_sendSilent=true
-
