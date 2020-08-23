@@ -55,6 +55,16 @@ motioneye-telegram checks whether your device is available in your wifi or not a
     ./install-tg.sh
     ```
 
+##### install the cronjob for presence check
+   to install the cronjob for presence check we have to run install-cron.sh as root (using sudo).
+   
+   as we should never run unknown scripts as root, we kindly invite you to take a sneek peak at [install-cron.sh](https://github.com/DaniW42/motioneye-telegram/blob/testing/install-cron.sh) before continuing.
+   to install the cronjob (which runs [bin/presencecheck.sh](https://github.com/DaniW42/motioneye-telegram/blob/testing/bin/presencecheck.sh) every minute):
+*   start the installation script and carefully read the instructions given
+    ```sh
+    sudo ./install-cron.sh
+    ```
+
 ### using motioneye-telegram as motioneye notification 
 
 *   look for your script path and enter it in motioneye ("run an end command" in "motion notification")
