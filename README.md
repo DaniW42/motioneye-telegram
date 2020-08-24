@@ -7,6 +7,17 @@
 The project is based on motioneye by [ccrisan - github](https://github.com/ccrisan/motioneye/wiki/Installation)
 motioneye-telegram checks whether your device is available in your wifi or not and sends a message to your telegram-bot if motion was detected.
 
+### Features
+*   send latest snapshot and video via telegram
+*   check that your not at home (by pinging one or more eg. smartphones)
+
+### Prerequisites
+
+For these scripts to run, you have to ensure that your environment meets the follwing prerequisites:
+*   Raspberry Pi OS Version Buster (Debian 10)
+*   latest [motioneye](https://github.com/ccrisan/motioneye/wiki/Installation) installed
+*   somehow fixed IP Adress for your smartphone(s) or other devices.
+
 ### Bot-Creation
 
 ##### create a new telegram-bot
