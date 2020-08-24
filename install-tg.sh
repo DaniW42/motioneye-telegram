@@ -58,7 +58,7 @@ function func_setConfVar () {
 		then
 			func_isVarEmpty $3 && echo "Error" || break
 		else
-			$2="$userinput"
+			printf -v $2 "$userinput"
 			break
 		fi
 	done
