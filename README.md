@@ -9,7 +9,7 @@ motioneye-telegram checks whether your device is available in your wifi or not a
 
 ### Features
 *   send latest snapshot and video via telegram
-*   check that your not at home (by pinging one or more eg. smartphones)
+*   check that you are not at home (by pinging one or more eg. smartphones)
 
 ### Prerequisites
 
