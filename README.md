@@ -17,6 +17,18 @@ motioneye-telegram checks whether your device is available in your wifi or not a
     ```
 *   write down your HTTP API KEY 
 
+##### get your chat-id:
+*   start a conversation with [@jsondumpbot](https://t.me/jsondumpbot).
+*   this will return a json-styled message to you which includes your chat-id:
+*   for example:
+    ````
+    "chat": {
+      "id": <your chat id, eg. 321654987>,
+      (... some more content ...)
+    },
+    ````
+*   take note of your chat-id and save it alongside your http api key
+
 ##### privacy activation 
 *   details can be found [here](https://core.telegram.org/bots#privacy-mode)
 *   send the following command to @botfather to use some more privacy  
@@ -32,18 +44,6 @@ motioneye-telegram checks whether your device is available in your wifi or not a
 	/setuserpic - changes the photo in your bot-profile
     ```
 
-##### note your chat-id:
-*   send some messages to your newly created bot (@<YOUR_BOT_USERNAME>)
-*   open the link with your API KEY in it (without angle brackets)
-    ```
-    https://api.telegram.org/bot<ENTER_YOUR_COMPLETE_API_KEY>/getUpdates
-    ```
-*   browser output:
-	```
-	"message":{"message_id":1194,"from":{"id":<YOUR_CHAT_ID>,"is_bot":false,"first_name":"<YOUT_NAME>","username":"<YOUR_USER_NAME>","language_code":"de"}
-	```
-*   take note of your chat-id and save it alongside your http api key
-
 
 ### installation of motioneye-telegram
 *   go to your home directory on your raspberry pi
@@ -55,6 +55,16 @@ motioneye-telegram checks whether your device is available in your wifi or not a
     ```sh
     cd motioneye-telegram
     ./install-tg.sh
+    ```
+
+##### install the cronjob for presence check
+   to install the cronjob for presence check we have to run install-cron.sh as root (using sudo).
+   
+   as we should never run unknown scripts as root, we kindly invite you to take a sneek peak at [install-cron.sh](https://github.com/DaniW42/motioneye-telegram/blob/testing/install-cron.sh) before continuing.
+   to install the cronjob (which runs [bin/presencecheck.sh](https://github.com/DaniW42/motioneye-telegram/blob/testing/bin/presencecheck.sh) every minute):
+*   start the installation script and carefully read the instructions given
+    ```sh
+    sudo ./install-cron.sh
     ```
 
 ### using motioneye-telegram as motioneye notification 
