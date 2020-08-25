@@ -9,14 +9,18 @@ motioneye-telegram checks whether your device is available in your wifi or not a
 
 ### Features
 *   send latest snapshot and video via telegram
-*   check that you are not at home (by pinging one or more eg. smartphones)
+*   presence-check (you are not at home by pinging one or more eg. smartphones)
+*   no port forwardings or open ports required (443 outbound must be possible)
+*   no telegram-bot installation required
 
 ### Prerequisites
 
 For these scripts to run, you have to ensure that your environment meets the follwing prerequisites:
+*   Minimum, by motioneye supported, Raspberry Pi (SBC)
 *   Raspberry Pi OS Version Buster (Debian 10)
 *   latest [motioneye](https://github.com/ccrisan/motioneye/wiki/Installation) installed
-*   somehow fixed IP Adress for your smartphone(s) or other devices.
+*   tested with motion Version 4.2.2 and motionEye Version 0.42.1
+*   somehow fixed IP Adress for your smartphone(s) or other devices
 
 ### Bot-Creation
 
