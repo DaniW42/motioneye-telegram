@@ -22,6 +22,8 @@ For these scripts to run, you have to ensure that your environment meets the fol
 *   tested with motion Version 4.2.2 and motionEye Version 0.42.1
 *   somehow fixed IP Adress for your smartphone(s) or other devices
 
+----------
+
 ### Bot-Creation
 
 ##### create a new telegram-bot
@@ -59,6 +61,7 @@ For these scripts to run, you have to ensure that your environment meets the fol
 	```
 *   take note of your chat-id and save it alongside your http api key
 
+----------
 
 ### installation of motioneye-telegram
 *   go to your home directory on your raspberry pi
