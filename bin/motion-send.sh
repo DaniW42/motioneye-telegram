@@ -49,9 +49,9 @@ else
 	func_writeLog "$(date) - \$lastvideo is $lastvideo"
 
 	func_writeLog "$(date) - BEGIN tg-sendPhoto.py:"
-	$var_binDir/tg-sendPhoto.py $var_botApiKey $var_chatId $lastsnap "$var_cameraName - ${lastsnap: -23:19}" >/dev/null 2>&1
+	$var_binDir/tg-sendPhoto.py $var_botApiKey $var_chatId $lastsnap "$var_cameraName - ${lastsnap: -23:19}"
 	func_writeLog "$(date) - BEGIN tg-sendVideo.py:"
-	$var_binDir/tg-sendVideo.py $var_botApiKey $var_chatId $lastvideo "$var_cameraName - ${lastsnap: -23:19}" >/dev/null 2>&1
+	$var_binDir/tg-sendVideo.py $var_botApiKey $var_chatId $lastvideo "$var_cameraName - ${lastsnap: -23:19}"
 
 	func_writeLog "========================================================="
 	func_writeLog ""
