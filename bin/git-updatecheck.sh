@@ -57,9 +57,10 @@ function func_updatecheckMain () {
 
 			[nN] | [nN][oO] )
 				echo -e ${ERROR}You selected not to update local repository. ${NOCOLOR}
-				echo -e ${FINISHED}That is Ok, but you have to do this on your own. See ya! ${NOCOLOR}
+				echo -e ${FINISHED}That is Ok, but you have to do this on your own! ${NOCOLOR}
 				echo
-				exit 2
+				read -n1 -r -p "Press any key to continue..." var_key
+				exit 0
 				;;
 
 			*)
