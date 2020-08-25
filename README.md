@@ -1,3 +1,5 @@
+![Header Image](http://drive.google.com/uc?export=view&id=1Hr81-eWulUwr-BDpl926xbuQ4hsHvjzm)	
+
 # motioneye-telegram
 
 ### WORK IN PROGRESS! - Check every script twice
@@ -26,7 +28,7 @@ For these scripts to run, you have to ensure that your environment meets the fol
 
 ##### create a new telegram-bot
 *   look for [@botfather](https://t.me/botfather) in telegram and open a chat
-*	enter the following command and follow the the wizard for creation
+*	enter the following command and follow the wizard for creation
     ```
     /newbot
     ```
@@ -58,6 +60,8 @@ For these scripts to run, you have to ensure that your environment meets the fol
 	/setabouttext - changes the bot-about-description
 	/setuserpic - changes the photo in your bot-profile
     ```
+
+----------
 
 ### installation of motioneye-telegram
 *   go to your home directory on your raspberry pi
