@@ -73,6 +73,7 @@ function func_updatecheckMain () {
 	exit 0
 	else
 	echo -e ${FINISHED}Current branch is up to date with origin/testing. ${NOCOLOR}
+	sleep 2
 	fi
 }
 
