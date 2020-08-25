@@ -20,9 +20,9 @@ function func_checkBranch () {
 	echo -e ${ACTION}Checking Git branch
 	echo -e =======================${NOCOLOR}
 	BRANCH=$(git rev-parse --abbrev-ref HEAD)
-	if [ "$BRANCH" != "testing" ]
+	if [ "$BRANCH" != "master" ]
 	then
-		echo -e ${ERROR}Not on testing. Aborting. ${NOCOLOR}
+		echo -e ${ERROR}Not on master. Aborting. ${NOCOLOR}
 		echo
 		exit 1
 	else
@@ -37,7 +37,7 @@ function func_updatecheckMain () {
 	echo -e =======================${NOCOLOR}
 	git fetch
 	HEADHASH=$(git rev-parse HEAD)
-	UPSTREAMHASH=$(git rev-parse testing@{upstream})
+	UPSTREAMHASH=$(git rev-parse master@{upstream})
 
 	if [ "$HEADHASH" != "$UPSTREAMHASH" ]
 		then
@@ -73,17 +73,17 @@ function func_updatecheckMain () {
 	echo
 	exit 0
 	else
-	echo -e ${FINISHED}Current branch is up to date with origin/testing. ${NOCOLOR}
+	echo -e ${FINISHED}Current branch is up to date with origin/master. ${NOCOLOR}
 	sleep 2
 	fi
 }
 
-## Before starting I want to check so that I have the testing branch checked out. Since thats the branch i want to deploy from.
+## Before starting I want to check so that I have the master branch checked out. Since thats the branch i want to deploy from.
 
 func_checkBranch
 
 ## After that we can get the latest commit hash from our branch by running git rev-parse HEAD. Then to get the latest commit hash 
-## from the origin we run git rev-parse testing@{upstream} and compare these two. If they do not match there is either changes in 
-## the origin testing, or you haven’t pushed the latest local commit to origin testing.
+## from the origin we run git rev-parse master@{upstream} and compare these two. If they do not match there is either changes in 
+## the origin master, or you haven’t pushed the latest local commit to origin master.
 
 func_updatecheckMain
