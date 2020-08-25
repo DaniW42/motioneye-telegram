@@ -107,7 +107,7 @@ then
 	func_readLocalConf
 else
 	func_writeLog "Found telegram.conf, checking version."
-	var_GitConfVersion="$(curl --silent https://raw.githubusercontent.com/DaniW42/motioneye-telegram/testing/telegram.conf.original | grep ConfVersion | cut -d '=' -f 2)"
+	var_GitConfVersion="$(curl --silent https://raw.githubusercontent.com/DaniW42/motioneye-telegram/master/telegram.conf.original | grep ConfVersion | cut -d '=' -f 2)"
 	if [[ "$var_GitConfVersion" == "$var_ConfVersion" ]]
 	then
 		func_writeLog "- Local Config-File Version matches GitHub Version, nothing to update."
@@ -170,10 +170,10 @@ read -p "Write current configuration to telegram.conf? [Y/n]: " var_confSave
 case $var_confSave in
 	[yY] | [yY][eE][sS] )
 		func_writeLog "Ok, saving current configuration, bye."
-		sed -i "s/^var_botApiKey=.*$/var_botApiKey='$var_botApiKey'/" $var_confFile
-		sed -i "s/^var_chatId=.*$/var_chatId='$var_chatId'/" $var_confFile
-		sed -i "s/^var_pingDevices=.*$/var_pingDevices=(${var_pingDevices[*]})/" $var_confFile
-		sed -i "s/^LastConfigSave=.*$/LastConfigSave='$(date)'/" $var_confFile
+		sed -i "s/var_botApiKey=.*$/var_botApiKey='$var_botApiKey'/" $var_confFile
+		sed -i "s/var_chatId=.*$/var_chatId='$var_chatId'/" $var_confFile
+		sed -i "s/var_pingDevices=.*$/var_pingDevices=(${var_pingDevices[*]})/" $var_confFile
+		sed -i "s/LastConfigSave=.*$/LastConfigSave='$(date)'/" $var_confFile
 		;;
 
 	[nN] | [nN][oO] )
