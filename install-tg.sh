@@ -172,7 +172,7 @@ case $var_confSave in
 		func_writeLog "Ok, saving current configuration, bye."
 		sed -i "s/var_botApiKey=.*$/var_botApiKey='$var_botApiKey'/" $var_confFile
 		sed -i "s/var_chatId=.*$/var_chatId='$var_chatId'/" $var_confFile
-		sed -i "s/var_pingDevices=.*$/var_pingDevices=(${var_pingDevices[*]})/" $var_confFile
+		sed -i "s/^var_pingDevices=.*$/var_pingDevices=(${var_pingDevices[*]})/" $var_confFile
 		sed -i "s/LastConfigSave=.*$/LastConfigSave='$(date)'/" $var_confFile
 		;;
 
