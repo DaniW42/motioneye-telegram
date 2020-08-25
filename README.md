@@ -1,5 +1,3 @@
-![Header Image](http://drive.google.com/uc?export=view&id=1Hr81-eWulUwr-BDpl926xbuQ4hsHvjzm)
-
 # motioneye-telegram
 
 ### WORK IN PROGRESS! - Check every script twice
@@ -28,11 +26,23 @@ For these scripts to run, you have to ensure that your environment meets the fol
 
 ##### create a new telegram-bot
 *   look for [@botfather](https://t.me/botfather) in telegram and open a chat
-*	enter the following command and follow the wizard for creation
+*	enter the following command and follow the the wizard for creation
     ```
     /newbot
     ```
 *   write down your HTTP API KEY 
+
+##### get your chat-id:
+*   start a conversation with [@jsondumpbot](https://t.me/jsondumpbot).
+*   this will return a json-styled message to you which includes your chat-id:
+*   for example:
+    ````
+    "chat": {
+      "id": <your chat id, eg. 321654987>,
+      (... some more content ...)
+    },
+    ````
+*   take note of your chat-id and save it alongside your http api key
 
 ##### privacy activation 
 *   details can be found [here](https://core.telegram.org/bots#privacy-mode)
@@ -49,20 +59,6 @@ For these scripts to run, you have to ensure that your environment meets the fol
 	/setuserpic - changes the photo in your bot-profile
     ```
 
-##### note your chat-id:
-*   send some messages to your newly created bot (@<YOUR_BOT_USERNAME>)
-*   open the link with your API KEY in it (without angle brackets)
-    ```
-    https://api.telegram.org/bot<ENTER_YOUR_COMPLETE_API_KEY>/getUpdates
-    ```
-*   browser output:
-	```
-	"message":{"message_id":1194,"from":{"id":<YOUR_CHAT_ID>,"is_bot":false,"first_name":"<YOUT_NAME>","username":"<YOUR_USER_NAME>","language_code":"de"}
-	```
-*   take note of your chat-id and save it alongside your http api key
-
-----------
-
 ### installation of motioneye-telegram
 *   go to your home directory on your raspberry pi
 *   download all the files from github 
@@ -73,6 +69,16 @@ For these scripts to run, you have to ensure that your environment meets the fol
     ```sh
     cd motioneye-telegram
     ./install-tg.sh
+    ```
+
+##### install the cronjob for presence check
+   to install the cronjob for presence check we have to run install-cron.sh as root (using sudo).
+   
+   as we should never run unknown scripts as root, we kindly invite you to take a sneek peak at [install-cron.sh](https://github.com/DaniW42/motioneye-telegram/blob/testing/install-cron.sh) before continuing.
+   to install the cronjob (which runs [bin/presencecheck.sh](https://github.com/DaniW42/motioneye-telegram/blob/testing/bin/presencecheck.sh) every minute):
+*   start the installation script and carefully read the instructions given
+    ```sh
+    sudo ./install-cron.sh
     ```
 
 ### using motioneye-telegram as motioneye notification 

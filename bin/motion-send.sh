@@ -31,25 +31,10 @@ func_sendVideo () {
    $var_binDir/tg-sendVideo.py $var_botApiKey $var_chatId $1 $2
 }
 
-func_pingDevices () {
-  ## loop through var_pingDevices array and set var_TEMPdevicefound true if at least one ping was successful
-   var_TEMPdevicefound=false
-   for i in "${var_pingDevices[@]}"
-   do
-     if ping -c 3 -W 2 $i > /dev/null
-     then
-       var_TEMPdevicefound=true
-       return 0
-     fi
-   done
-
-   return 1
-}
-
 func_writeLog "========================================================="
 func_writeLog "$(date) - MOTION DETECTED by Camera $var_cameraName."
 
-if func_pingDevices
+if $var_deviceAvailable -eq "true"
 
 then
 	func_writeLog "$(date) - Device available, end script."

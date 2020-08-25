@@ -58,7 +58,7 @@ function func_setConfVar () {
 		then
 			func_isVarEmpty $3 && echo "Error" || break
 		else
-			$2="$userinput"
+			printf -v $2 "$userinput"
 			break
 		fi
 	done
@@ -82,8 +82,14 @@ function func_setConfArray () {
 		fi
 	done
 }
+
+function func_updateRepo () {
+	$var_scriptDir/bin/git-updatecheck.sh
+}
+
 ## END Functions
 
+func_updateRepo
 func_readLocalConf
 
 func_clearScreen
@@ -94,11 +100,10 @@ func_writeLog "#################################################################
 func_writeLog ""
 
 ## Check for config file, if not found wget it from github, if found check version and ask user to update
-if [ ! -f "telegram.conf" ]
+if [ ! -f "$var_scriptDir/telegram.conf" ]
 then
-	func_writeLog "I was unable to find telegram.conf file!"
-	func_writeLog "This is why I decided to get you a new one from github ;-)"
-	func_getGitHubConf telegram.conf
+	func_writeLog "I was unable to find telegram.conf file! Creating blank configuration."
+	cp -v $var_scriptDir/telegram.conf.original $var_scriptDir/telegram.conf >> $var_logFile
 	func_readLocalConf
 else
 	func_writeLog "Found telegram.conf, checking version."
@@ -120,8 +125,8 @@ else
 			[yY] | [yY][eE][sS] )
 				func_writeLog "Ok, I will process values and backup 'old' config, then get a clean file from GitHub."
 				func_readLocalConf
-				mv $var_scriptDir/telegram.conf $var_scriptDir/telegram.conf.bak
-				func_getGitHubConf $var_scriptDir/telegram.conf
+				mv -v $var_scriptDir/telegram.conf $var_scriptDir/telegram.conf.bak >> $var_logFile
+				cp -v $var_scriptDir/telegram.conf.original $var_scriptDir/telegram.conf >> $var_logFile
 				;;
 
 			[nN] | [nN][oO] )
