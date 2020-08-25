@@ -9,7 +9,7 @@ var_confFile="$var_scriptDir/telegram.conf"
 function func_getGitHubConf () {
 ## Get fresh config file from github and save as (parameter 1)
 
-	wget -q https://raw.githubusercontent.com/DaniW42/motioneye-telegram/testing/telegram.conf.original -O $1
+	wget -q https://raw.githubusercontent.com/DaniW42/motioneye-telegram/master/telegram.conf.original -O $1
 }
 
 function func_readLocalConf () {
