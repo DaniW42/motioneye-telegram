@@ -12,6 +12,7 @@ motioneye-telegram checks whether your device is available in your wifi or not a
 *   presence-check (you are not at home by pinging one or more eg. smartphones)
 *   no port forwardings or open ports required (443 outbound must be possible)
 *   no telegram-bot installation required
+*   ! currently there are some problems with wifi-devices in energy saving mode, any help appreciated.
 
 ### Prerequisites
 
