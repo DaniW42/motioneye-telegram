@@ -14,7 +14,7 @@ function func_pingDevices () {
   ## loop through var_pingDevices array and return 0 if at least one ping was successful
    for i in "${var_pingDevices[@]}"
    do
-     if ping -c 3 -W 2 $i > /dev/null
+     if /usr/sbin/arping -c 5 $i > /dev/null
      then
        return 0
      fi

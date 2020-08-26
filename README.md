@@ -1,4 +1,4 @@
-![Header Image](http://drive.google.com/uc?export=view&id=1Hr81-eWulUwr-BDpl926xbuQ4hsHvjzm)	
+![Header Image](/assets/repository-open-graph.png)
 
 # motioneye-telegram
 
