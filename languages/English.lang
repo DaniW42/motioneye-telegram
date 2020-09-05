@@ -1,4 +1,4 @@
-##language file - ENGLISCH
+##language file - ENGLISH
 
 ##install-tg.sh
 var_setApiText="Please enter your Api Key (Currently: "
@@ -7,6 +7,8 @@ var_setIpAddressText="Please enter your IP-Addresses (Currently: "
 
 var_saveConfText="Create new telegram.conf? [Y/n]: "
 var_errorText="Error"
+
+var_chosenLanguage="The current language is ENGLISH."
 
 
 ##install-cron.sh
