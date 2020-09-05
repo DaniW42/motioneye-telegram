@@ -7,10 +7,7 @@ var_cameraName=$1
 var_cameraId=$2
 
 var_forceSend='false'
-if [[ $@ == *"force"* ]]
-then
-	var_forceSend="true"
-fi
+[[ $@ == *"force"* ]] && var_forceSend="true"
 
 ## get my current directory
 var_binDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
