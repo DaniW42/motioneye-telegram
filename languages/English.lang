@@ -1,0 +1,20 @@
+##language file - ENGLISCH
+
+##install-tg.sh
+var_setApiText="Please enter your Api Key (Currently: "
+var_setChatIdText="Please enter your Chat_id (Currently: "
+var_setIpAddressText="Please enter your IP-Addresses (Currently: "
+
+var_saveConfText="Create new telegram.conf? [Y/n]: "
+var_errorText="Error"
+
+
+##install-cron.sh
+var_runAsRootText="Please run as root"
+var_startInstallCronText="About to install /etc/cron.d/motioneye-telegram with content:"
+var_createCronjobText="Create new cronjob? [Y/n]: "
+var_successfullText="Successful, end script."
+var_errorText2="Hmmm...Something went wrong, no file created..."
+var_selectedNoText="You selected to not create new cronjob."
+var_installItYourselfText="That is Ok, but you have to do this on your own. See ya!"
+var_wrongInputText="Wrong answer given. Abort install."
