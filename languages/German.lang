@@ -8,6 +8,8 @@ var_setIpAddressText="Bitte gib eine IP-Adresse ein (Aktuell: "
 var_saveConfText="Soll die neue Konfigurationsdatei telegram.conf erstellt werden? [Y/n]: "
 var_errorText="Fehler"
 
+var_chosenLanguage="Die aktuelle Sprache ist Deutsch."
+
 
 ##install-cron.sh
 var_runAsRootText="Bitte starte das Skript als root"
