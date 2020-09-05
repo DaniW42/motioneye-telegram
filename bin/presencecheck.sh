@@ -17,7 +17,7 @@ function func_pingDevices () {
      if /usr/sbin/arping -c 5 $i > /dev/null
      then
        return 0
-     fi 
+     fi
    done
 
    return 1
