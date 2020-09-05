@@ -6,6 +6,12 @@ var_cameraName=$1
 ## Get the id of the camera which detected a motion (done by parameter %t in motioneye webinterface command)
 var_cameraId=$2
 
+var_forceSend='false'
+if [[ $@ == *"force"* ]]
+then
+	var_forceSend="true"
+fi
+
 ## get my current directory
 var_binDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
@@ -36,10 +42,16 @@ func_sendVideo () {
    curl -s -X POST "https://api.telegram.org/bot"$var_botApiKey"/sendVideo" -F chat_id="$var_chatId" -F video="@$1" -F caption="$2"
 }
 
+func_checkForceSendTrue () {
+    [ $var_forceSend == "true" ] && var_deviceAvailable="false"
+}
+
 func_writeLog "========================================================="
 func_writeLog "$(date) - MOTION DETECTED by Camera $var_cameraName."
 
-if $var_deviceAvailable -eq "true"
+func_checkForceSendTrue
+
+if $var_deviceAvailable -eq "true" 
 
 then
 	func_writeLog "$(date) - Device available, end script."
