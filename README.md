@@ -70,6 +70,10 @@ For these scripts to run, you have to ensure that your environment meets the fol
     ```sh
     git clone https://github.com/DaniW42/motioneye-telegram.git
     ```
+*   install arping
+    ```sh
+    sudo apt install -y arping
+    ```
 *   start the installation script
     ```sh
     cd motioneye-telegram
