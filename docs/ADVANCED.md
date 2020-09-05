@@ -26,12 +26,12 @@ To use these methods you have to become familiar with integromat and follow the 
 
 #### 2. edit [tg-sendPhoto.py](bin/tg-sendPhoto.py) and [tg-sendVideo.py](bin/tg-sendVideo.py)
 
-in tg-sendPhoto.py replace
+in motion-send.sh replace
 ````diff
 -curl -s -X POST "https://api.telegram.org/bot"$1"/sendPhoto" -F chat_id="$2" -F photo="@$3" -F caption="$4"
 +curl -s -X POST "WEBHOOK URL HERE" -F photo="@$3" -F caption="$4"
 ````
-in tg-sendVideo.py replace
+in motion-send.sh replace
 ````diff
 -curl -s -X POST "https://api.telegram.org/bot"$1"/sendVideo" -F chat_id="$2" -F video="@$3" -F caption="$4"
 +curl -s -X POST "WEBHOOK URL HERE" -F video="@$3" -F caption="$4"
