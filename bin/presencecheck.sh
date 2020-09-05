@@ -14,7 +14,7 @@ function func_pingDevices () {
   ## loop through var_pingDevices array and return 0 if at least one ping was successful
    for i in "${var_pingDevices[@]}"
    do
-     if /usr/sbin/arping -c 6 "$i" >> /home/pi/motioneye-telegram/motion-send.log
+     if /usr/sbin/arping -c 5 $i > /dev/null
      then
        return 0
      fi 
