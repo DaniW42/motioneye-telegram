@@ -13,7 +13,7 @@ var_chosenLanguage="The current language is ENGLISH."
 
 ##install-cron.sh
 var_runAsRootText="Please run as root"
-var_startInstallCronText="About to install /etc/cron.d/motioneye-telegram with content:"
+var_startInstallCronText="About to install /etc/cron.d/motioneye-telegram."
 var_createCronjobText="Create new cronjob? [Y/n]: "
 var_successfullText="Successful, end script."
 var_errorText2="Hmmm...Something went wrong, no file created..."
