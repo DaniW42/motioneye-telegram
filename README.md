@@ -2,6 +2,9 @@
 
 # motioneye-telegram
 
+### Contribute! :heart:
+We noticed that people are really using motioneye-telegram, that is awesome. If you encounter any problems or can't find something you are searching for, feel free to contact us (of course) via [Telegram](https://t.me/daniw42) or by adding an [issue](https://github.com/DaniW42/motioneye-telegram/issues). Any ideas are welcome!
+
 ### WORK IN PROGRESS! - Check every script twice
 
 The project is based on motioneye by [ccrisan - github](https://github.com/ccrisan/motioneye/wiki/Installation)
