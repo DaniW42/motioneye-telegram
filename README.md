@@ -1,23 +1,23 @@
 ![Header Image](/assets/repository-open-graph.png)
 
-# motioneye-telegram
+# :movie_camera::iphone: MotionEye-Telegram
 
-### Contribute! :heart:
+### :heart: Contribute!
 We noticed that people are really using motioneye-telegram, that is awesome. If you encounter any problems or can't find something you are searching for, feel free to contact us (of course) via [Telegram](https://t.me/daniw42) or by adding an [issue](https://github.com/DaniW42/motioneye-telegram/issues). Any ideas are welcome!
 
-### WORK IN PROGRESS! - Check every script twice
+### :warning: WORK IN PROGRESS! - Check every script twice
 
 The project is based on motioneye by [ccrisan - github](https://github.com/ccrisan/motioneye/wiki/Installation)
 motioneye-telegram checks whether your device is available in your wifi or not and sends a message to your telegram-bot if motion was detected.
 
-### Features
+### :zap: Features
 *   send latest snapshot and video via telegram
 *   presence-check (you are not at home by pinging one or more eg. smartphones)
 *   no port forwardings or open ports required (443 outbound must be possible)
 *   no telegram-bot installation required
 *   ! currently there are some problems with wifi-devices in energy saving mode, any help appreciated.
 
-### Prerequisites
+### :clipboard: Prerequisites
 
 For these scripts to run, you have to ensure that your environment meets the follwing prerequisites:
 *   Minimum, by motioneye supported, Raspberry Pi (SBC)
@@ -28,7 +28,7 @@ For these scripts to run, you have to ensure that your environment meets the fol
 
 ----------
 
-### Bot-Creation
+### :robot: Bot-Creation
 
 ##### create a new telegram-bot
 *   look for [@botfather](https://t.me/botfather) in telegram and open a chat
@@ -67,7 +67,7 @@ For these scripts to run, you have to ensure that your environment meets the fol
 
 ----------
 
-### installation of motioneye-telegram
+### :keyboard: installation of motioneye-telegram
 *   go to your home directory on your raspberry pi
 *   download all the files from github 
     ```sh
@@ -93,7 +93,7 @@ For these scripts to run, you have to ensure that your environment meets the fol
     sudo ./install-cron.sh
     ```
 
-### using motioneye-telegram as motioneye notification 
+### :rocket: using motioneye-telegram as motioneye notification 
 
 *   look for your script path and enter it in motioneye ("run an end command" in "motion notification")
 	e.g. ```/home/pi/motioneye-telegram/bin/motion-send.sh %$ %t```
