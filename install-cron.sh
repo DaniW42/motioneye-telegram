@@ -9,7 +9,7 @@ fi
 ## get current path to be set as directory in cron
 var_scriptDir="$(
 	cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null \
-	&& pwd
+		&& pwd
 )"
 
 ## where we place the cron job
@@ -17,9 +17,9 @@ var_cronFile="/etc/cron.d/motioneye-telegram"
 var_defaultNewCron="y"
 
 cat <<-INTRO
-	About to install /etc/cron.d/motioneye-telegram with content:"
+	About to install $var_cronFile with content:"
 	##################################################################
-	* * * * * root $var_scriptDir/bin/presencecheck.sh &>/dev/null    
+	* * * * * root $var_scriptDir/bin/presencecheck.sh &>/dev/null
 	##################################################################
 
 INTRO
@@ -34,13 +34,13 @@ case ${var_NewCron,,} in
 	## [y] create new config file or [n] simply quit.
 	y)
 		echo "Ok, I will create new cronjob."
-		touch $var_cronFile
+		touch $var_cronFile &>/dev/null
 		echo "* * * * * root $var_scriptDir/bin/presencecheck.sh &>/dev/null" > $var_cronFile
 
 		## check if file was created and either exit or report error
-		test $var_cronFile && echo "Successful, end script."
-		exit 0 || echo "Hmmm.. Something went wrong, no file created...";
-		exit 1
+		test -e "$var_cronFile" \
+			&& (echo "Successful, end script."; exit 0) \
+			|| (echo "Hmmm.. Something went wrong, no file created..."; exit 1)
 	;;
 	n)
 		echo "You selected to not create new cronjob."
