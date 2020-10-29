@@ -1,5 +1,7 @@
 ![Header Image](/assets/repository-open-graph.png)
 
+[![Gitter](https://badges.gitter.im/motioneye-telegram/community.svg)](https://gitter.im/motioneye-telegram/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 # :movie_camera::iphone: MotionEye-Telegram
 
 ### :heart: Contribute!
