@@ -71,6 +71,9 @@ For these scripts to run, you have to ensure that your environment meets the fol
 
 ### :keyboard: installation of motioneye-telegram
 *   go to your home directory on your raspberry pi
+    ```sh
+    cd ~
+    ```
 *   download all the files from github 
     ```sh
     git clone https://github.com/DaniW42/motioneye-telegram.git
