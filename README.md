@@ -104,4 +104,14 @@ For these scripts to run, you have to ensure that your environment meets the fol
 *   ```%$``` important because it passes the camera name to the script
 *   ```%t``` important because it passes the camera id to the script
 
-#### Made with :heart: in Bavaria :beers:
+<p align="center">
+	<b>Made with :heart: in Bavaria :beers:</b>
+	<br />
+	<a href="https://twitter.com/intent/follow?screen_name=daniw42">
+        	<img src="https://img.shields.io/twitter/follow/daniw1337?style=social&logo=twitter" alt="follow on Twitter">
+	</a>
+	<a href="https://twitter.com/intent/follow?screen_name=talentpierre">
+		<img src="https://img.shields.io/twitter/follow/talentpierre?style=social&logo=twitter" alt="follow on Twitter">
+	</a>
+</p>
+
