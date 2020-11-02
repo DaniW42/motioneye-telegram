@@ -9,8 +9,7 @@ We noticed that people are really using motioneye-telegram, that is awesome. If 
 
 ### :warning: WORK IN PROGRESS! - Check every script twice
 
-The project is based on motioneye by [ccrisan - github](https://github.com/ccrisan/motioneye/wiki/Installation)
-motioneye-telegram checks whether your device is available in your wifi or not and sends a message to your telegram-bot if motion was detected.
+The project is based on motioneye by [ccrisan - github](https://github.com/ccrisan/motioneye/wiki/Installation). motioneye-telegram checks whether your device is available in your wifi or not and sends a message to your telegram-bot if motion was detected.
 
 ### :zap: Features
 *   send latest snapshot and video via telegram
@@ -104,3 +103,5 @@ For these scripts to run, you have to ensure that your environment meets the fol
 	e.g. ```/home/pi/motioneye-telegram/bin/motion-send.sh %$ %t```
 *   ```%$``` important because it passes the camera name to the script
 *   ```%t``` important because it passes the camera id to the script
+
+#### Made with :heart: in Bavaria :beers:
