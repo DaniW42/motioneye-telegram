@@ -87,8 +87,8 @@ For these scripts to run, you have to ensure that your environment meets the fol
     ./install-tg.sh
     ```
 
-##### install the cronjob for presence check
-   to install the cronjob for presence check we have to run install-cron.sh as root (using sudo).
+##### install the cronjob for [presence check](https://github.com/DaniW42/motioneye-telegram/blob/master/docs/PRESENCECHECK.md)
+   to install the cronjob for [presence check](https://github.com/DaniW42/motioneye-telegram/blob/master/docs/PRESENCECHECK.md) we have to run install-cron.sh as root (using sudo).
    
    as we should never run unknown scripts as root, we kindly invite you to take a sneek peak at [install-cron.sh](https://github.com/DaniW42/motioneye-telegram/blob/master/install-cron.sh) before continuing.
    to install the cronjob (which runs [bin/presencecheck.sh](https://github.com/DaniW42/motioneye-telegram/blob/master/bin/presencecheck.sh) every minute):
