@@ -62,9 +62,9 @@ else
 	func_writeLog "$(date) - \$lastsnap is $lastsnap"
 	func_writeLog "$(date) - \$lastvideo is $lastvideo"
 
-	func_writeLog "$(date) - BEGIN tg-sendPhoto.py:"
+	func_writeLog "$(date) - BEGIN sendPhoto:"
 	func_sendPhoto $lastsnap "$var_cameraName - ${lastsnap: -23:19}"
-	func_writeLog "$(date) - BEGIN tg-sendVideo.py:"
+	func_writeLog "$(date) - BEGIN sendVideo:"
 	func_sendVideo $lastvideo "$var_cameraName - ${lastsnap: -23:19}"
 
 	func_writeLog "========================================================="
