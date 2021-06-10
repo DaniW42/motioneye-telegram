@@ -107,7 +107,7 @@ For these scripts to run, you have to ensure that your environment meets the fol
 <p align="center">
 	<b>Made with :heart: in Bavaria :beers:</b>
 	<br />
-	<a href="https://twitter.com/intent/follow?screen_name=daniw42">
+	<a href="https://twitter.com/intent/follow?screen_name=daniw1337">
         	<img src="https://img.shields.io/twitter/follow/daniw1337?style=social&logo=twitter" alt="follow on Twitter">
 	</a>
 	<a href="https://twitter.com/intent/follow?screen_name=talentpierre">
