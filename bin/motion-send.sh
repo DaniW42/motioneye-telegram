@@ -28,15 +28,15 @@ func_writeLog () {
 
 func_sendMessage () {
 ## Currently not used
-   curl -s -X POST "https://api.telegram.org/bot"$var_botApiKey"/sendMessage" -F chat_id="$var_chatId" -F text="$1"
+   curl -s -X POST "https://api.telegram.org/bot"$var_botApiKey"/sendMessage" -F chat_id="$var_chatId" -F text="$1" | tee -a $var_projectDir/motion-send.log
 }
 
 func_sendPhoto () {
-   curl -s -X POST "https://api.telegram.org/bot"$var_botApiKey"/sendPhoto" -F chat_id="$var_chatId" -F photo="@$1" -F caption="$2"
+   curl -s -X POST "https://api.telegram.org/bot"$var_botApiKey"/sendPhoto" -F chat_id="$var_chatId" -F photo="@$1" -F caption="$2" | tee -a $var_projectDir/motion-send.log
 }
 
 func_sendVideo () {
-   curl -s -X POST "https://api.telegram.org/bot"$var_botApiKey"/sendVideo" -F chat_id="$var_chatId" -F video="@$1" -F caption="$2"
+   curl -s -X POST "https://api.telegram.org/bot"$var_botApiKey"/sendVideo" -F chat_id="$var_chatId" -F video="@$1" -F caption="$2" | tee -a $var_projectDir/motion-send.log
 }
 
 func_checkForceSendTrue () {
@@ -62,9 +62,9 @@ else
 	func_writeLog "$(date) - \$lastsnap is $lastsnap"
 	func_writeLog "$(date) - \$lastvideo is $lastvideo"
 
-	func_writeLog "$(date) - BEGIN tg-sendPhoto.py:"
+	func_writeLog "$(date) - BEGIN sendPhoto:"
 	func_sendPhoto $lastsnap "$var_cameraName - ${lastsnap: -23:19}"
-	func_writeLog "$(date) - BEGIN tg-sendVideo.py:"
+	func_writeLog "$(date) - BEGIN sendVideo:"
 	func_sendVideo $lastvideo "$var_cameraName - ${lastsnap: -23:19}"
 
 	func_writeLog "========================================================="
