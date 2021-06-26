@@ -49,7 +49,7 @@ func_createSnapArray () {
     do
         snapArray[ $i ]="$line"
         (( i++ ))
-    done < <(tree -ftri "$var_mediaCameraDir" | grep .jpg | head -n5)
+    done < <(tree -ftri "$var_mediaCameraDir" | grep .jpg | head -n"$var_picCount")
 }
 
 
