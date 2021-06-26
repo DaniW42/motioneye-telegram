@@ -1,6 +1,6 @@
 ## Configuration for tg-send* commands
 ## LastConfigSave=''
-var_ConfVersion=0.4
+var_ConfVersion=0.5
 
 ## Telegram specific
 var_botApiKey=''
@@ -11,3 +11,6 @@ var_chatId=''
 var_pingDevices=()
 var_pingFail='0'
 var_deviceAvailable='true'
+
+## How many pictures should be sent? You might want to tweak this setting at the motioneye webinterface too.
+var_picCount='1'
