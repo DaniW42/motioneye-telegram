@@ -99,6 +99,8 @@ For these scripts to run, you have to ensure that your environment meets the fol
 
 ### :rocket: using motioneye-telegram as motioneye notification 
 
+*   toggle Still Images on and select Capture Mode
+*   toggle Movies on and select Recording Mode	
 *   look for your script path and enter it in motioneye ("run an end command" in "motion notification")
 	e.g. ```/home/pi/motioneye-telegram/bin/motion-send.sh %$ %t```
 *   ```%$``` important because it passes the camera name to the script
