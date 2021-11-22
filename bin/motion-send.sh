@@ -43,6 +43,16 @@ func_checkForceSendTrue () {
     [ $var_forceSend == "true" ] && var_deviceAvailable="false"
 }
 
+func_createSnapArray () {
+    i=0
+    while read line
+    do
+        snapArray[ $i ]="$line"
+        (( i++ ))
+    done < <(tree -ftri "$var_mediaCameraDir" | grep .jpg | head -n"$var_picCount" | sort)
+}
+
+
 func_writeLog "========================================================="
 func_writeLog "$(date) - MOTION DETECTED by Camera $var_cameraName."
 
@@ -57,15 +67,21 @@ then
 else
 	func_writeLog "$(date) - Device NOT available, RUN script."
 
-	lastsnap=$(tree -ftri "$var_mediaCameraDir" | grep .jpg | head -n1)
 	lastvideo=$(tree -ftri "$var_mediaCameraDir" | grep -v thumb | grep .mp4 | head -n1)
-	func_writeLog "$(date) - \$lastsnap is $lastsnap"
-	func_writeLog "$(date) - \$lastvideo is $lastvideo"
+        func_writeLog "$(date) - \$lastvideo is $lastvideo"
+        func_writeLog "$(date) - BEGIN sendVideo:"
+        func_sendVideo $lastvideo "$var_cameraName - ${lastsnap: -23:19}"
 
-	func_writeLog "$(date) - BEGIN sendPhoto:"
-	func_sendPhoto $lastsnap "$var_cameraName - ${lastsnap: -23:19}"
-	func_writeLog "$(date) - BEGIN sendVideo:"
-	func_sendVideo $lastvideo "$var_cameraName - ${lastsnap: -23:19}"
+        func_createSnapArray
+        j=0
+        for i in "${snapArray[@]}"
+        do
+                func_writeLog "$(date) - snap is ${snapArray[$j]}"
+                func_writeLog "$(date) - BEGIN sendPhoto:"
+                var_tmp="${snapArray[$j]}"
+                func_sendPhoto $i "$var_cameraName - ${var_tmp: -23:19}"
+		(( j++ ))
+        done
 
 	func_writeLog "========================================================="
 	func_writeLog ""
