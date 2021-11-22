@@ -5,7 +5,7 @@
 # :movie_camera::iphone: MotionEye-Telegram
 
 ### :heart: Contribute!
-We noticed that people are really using motioneye-telegram, that is awesome. If you encounter any problems or can't find something you are searching for, feel free to contact us (of course) via [Telegram](https://t.me/daniw42) or by adding an [issue](https://github.com/DaniW42/motioneye-telegram/issues). Any ideas are welcome!
+We noticed that people are really using motioneye-telegram, that is awesome. If you encounter any problems or can't find something you are searching for, feel free to start a [discussion](https://github.com/DaniW42/motioneye-telegram/discussions), contact us (of course) via [Telegram](https://t.me/daniw42) or by adding an [issue](https://github.com/DaniW42/motioneye-telegram/issues). Any ideas are welcome!
 
 ### :warning: WORK IN PROGRESS! - Check every script twice
 
