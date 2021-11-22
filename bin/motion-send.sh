@@ -44,7 +44,7 @@ func_checkForceSendTrue () {
 }
 
 func_createSnapArray () {
-    i = 0
+    i=0
     while read line
     do
         snapArray[ $i ]="$line"
