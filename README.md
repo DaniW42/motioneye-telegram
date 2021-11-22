@@ -73,13 +73,13 @@ For these scripts to run, you have to ensure that your environment meets the fol
     ```sh
     cd ~
     ```
+*   install prerequisites
+    ```sh
+    sudo apt install -y arping tree git
+    ```
 *   download all the files from github 
     ```sh
     git clone https://github.com/DaniW42/motioneye-telegram.git
-    ```
-*   install arping and tree
-    ```sh
-    sudo apt install -y arping tree
     ```
 *   start the installation script
     ```sh
