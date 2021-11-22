@@ -80,6 +80,7 @@ else
                 func_writeLog "$(date) - BEGIN sendPhoto:"
                 var_tmp="${snapArray[$j]}"
                 func_sendPhoto $i "$var_cameraName - ${var_tmp: -23:19}"
+		(( j++ ))
         done
 
 	func_writeLog "========================================================="
