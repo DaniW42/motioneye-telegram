@@ -4,12 +4,13 @@
 
 # :movie_camera::iphone: MotionEye-Telegram
 
+### :warning: Deprecation notice :warning:
+This project started as a problem solver for ourself and did his job very well. Unfortunately, as things move on, development has stopped a long time ago. This is why it is officially being archived. There is a chance that it will continue to work for some people. If you like it - good. If it doesn't work - Sorry for wasting your time, feeling bad for you.
+
+----------
+
 ### :heart: Contribute!
 We noticed that people are really using motioneye-telegram, that is awesome. If you encounter any problems or can't find something you are searching for, feel free to start a [discussion](https://github.com/DaniW42/motioneye-telegram/discussions), contact us (of course) via [Telegram](https://t.me/daniw42) or by adding an [issue](https://github.com/DaniW42/motioneye-telegram/issues). Any ideas are welcome!
-
-### :warning: WORK IN PROGRESS! - Check every script twice
-
-The project is based on motioneye by [ccrisan - github](https://github.com/ccrisan/motioneye/wiki/Installation). motioneye-telegram checks whether your device is available in your wifi or not and sends a message to your telegram-bot if motion was detected.
 
 ### :zap: Features
 *   send latest n snapshots and video via telegram
